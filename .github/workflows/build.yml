@@ -16,7 +16,7 @@ jobs:
         with:
           gradle-version: '9.8.0'
       - name: Unpack source
-        run: unzip -o BDSMP-ByeByeButtons-1.21.11-source-v1.0.2.zip -d source
+        run: unzip -o BDSMP-ByeByeButtons-1.21.11-source-v1.0.2.zip -d source || true
       - name: Build mod
         run: gradle -p source build --no-daemon
       - uses: actions/upload-artifact@v4
